@@ -5,7 +5,7 @@ from time import time
 
 def sqz(data,filename='data.png',verbose=False):
     start = time()
-    size_before = sys.getsizeof(data)
+    size_before = getsizeof(data)
 
     if verbose:
         print(f'[sqz] Size of data before compression: {round(size_before / 1000000,3)} mb')
@@ -39,7 +39,7 @@ def sqz(data,filename='data.png',verbose=False):
         print(f'[sqz] Finished in {round(end-start,2)} seconds')
 
         f = open(filename,'rb')
-        size_after = sys.getsizeof(f.read())
+        size_after = getsizeof(f.read())
         f.close()
 
         print(f'[sqz] Size of data after compression: {round(size_after / 1000000,3)} mb | Ratio {round(size_after/size_before*100,3)}%\n')    
@@ -70,6 +70,6 @@ def ring(filename,verbose=False):
     end = time()
 
     if verbose:
-        print(f'[sqz] Finished in {round(end-start,2)} seconds')
+        print(f'[sqz] Finished in {round(end-start,2)} seconds\n')
     
     return data.replace('«','')
