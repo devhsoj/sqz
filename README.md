@@ -1,6 +1,6 @@
 # sqz
 
-sqz is a python3 based zlib-like png compression algorithm for compressing plain text
+sqz is a unique python3 based png compression algorithm for compressing plain text
 
 #### Setup
 ```sh
